@@ -14,7 +14,7 @@ Searching Algorithms
 
 LINEAR SEARCH - start at the beginning and systematically check data, until you find what you are looking for. Linear searching algorithms is a BRUTE FORCE method.
 JAVASCRIPT PUSUECODE
-LOOP- for (let i =0; i<array.length; i++0)
+LOOP- for (let i =0; i<array.length; i++)
 And then a set of instructions.
 
 BINARY SEARCH
@@ -46,3 +46,92 @@ BINARY SEARCH
   // If target never equals midIndex return -1
   return -1;
 };
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+STACKS
+- A data structure which contains all of the tasks you instruct your program to compare. Uses the LAST IN FIRST OUT (LIFO) retoric.   
+Pop () to take an element off fromt the back 
+Push () to put an alement on the back 
+shift () removes an element at the front 
+unshoft () adds an element to the front
+peek () shows the element on top 
+Length → Return the length of the stack.
+Search → Search for the element in the stack.
+IsEmpty → Check if the stack is empty.
+Print → Print the elements of the stack.
+
+QUEUES
+- a similar data structure to STACKS. However it is FIRST IN FIRST OUT (FIFO)
+
+
+LINKED LIST
+- is a sequential acess linear data structure in which every element is a seperate object called node
+- A node list contains two items, the data and the pointer to the next node. 
+- not operator = !
+Adding to the head of the LINKED LIST. : make the new node's pointer to the current head of the linked list 
+Removing  the head of the LINKED LIST : set the head nodes pointer to the null value
+
+Adding a node to the middle of a LIMKED LIST : 1) make the pointer of the new node to the the node after the location we want to insert at.
+2) set the node before the location we want to the insert to poiny towards the new node. 
+Removing a node from the middle - make the pointer, point to the node after the node we are removing. Then make the node we are removing point to null. 
+
+Adding a node to the tail of a LINKED LIST: make the current tail point towards the new node you want to add, instead of null. 
+Removing a node from the tail of a LINKED LIST: set the previous tail to point towards null. Instead of the current value. 
+
+
+
+MERGE SORT 
+- A stable, comparison-based, recursive, divide and conquer algorithm which repeatdly breaks down a list of elements into smaller and smaller parts. 
+Then puts it together sorted. 
+
+- In order to get the list from an unsorted state to a sorted state. We do so by comparing elemnents. 
+
+
+
+QUICK SORT
+
+
+
+HASH TABLES
+
+TREES
+- An abstract data structure which contains a series of linked nodes connected together to form a hirechacal representation of information.
+vetice- a certain node in a tree
+Edge- a connection between nodes
+Root node - Top most of a tree 
+
+BINARY SEARCH TREE 
+- For an given parent node, the child to the left has a value less than or equal to itself, and the child to the right has a value greater than or equal to itself. 
+- no two nodes can contain the same value 
+MERGING TWO BST
+
+Example code - recursive approach 
+const mergeTrees = (t1, t2) => {
+    if (!t1 && !t2) return null;
+    
+    const left = mergeTrees(t1 && t1.left, t2 && t2.left);
+    const right = mergeTrees(t1 && t1.right, t2 && t2.right);
+        
+    return new TreeNode(
+        (t1 && t1.val) + (t2 && t2.val),
+        left,
+        right,
+    );
+};
+
+
+GRAPHS
+- A nonlinear data structure consiting of nodes and edges
+- No specific starting point - mutiple starting points and mutiple branches. 
+
+
+BREADTH-FIRST SEARCH
+
+
+DEPTH- FIRST SEARCH 
+
+
+
+
+
+
