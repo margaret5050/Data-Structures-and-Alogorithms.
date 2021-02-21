@@ -1,7 +1,7 @@
 Arrays 
 %- modules 
 if a number modulo is 0 the number is even, if the number is 1 the number is odd
-LOOP- used when you would like to carrt out certaub set of instructions
+LOOP- used when you would like to carry out specific set of instructions
 3 parts to a loop - An integer, a conditional statement (i<100), an operation to modify the integer value, AFTER the instructions inside the loop are completed (i++).
 FOR EACH LOOP- the loop will go through each element in the array and carry out the set of instructions for each value.
 WHILE LOOP- willl countinously carry out it instructions while a conditional statement given to its true.
@@ -85,10 +85,50 @@ MERGE SORT
 Then puts it together sorted. 
 
 - In order to get the list from an unsorted state to a sorted state. We do so by comparing elemnents. 
+- Merge sort has 3 components. The left index, the right index and the full array . 
+
+EXAMPLE CODE 
+MERGE TO SORTED ARRAYS
+function merge(arr1, arr2) {
+  let merged = [];
+  // index for arr1
+  let index1 = 0;
+  // index for arr2
+  let index2 = 0;
+  while (index1 < arr1.length && index2 < arr2.length) {
+    if (arr1[index1] < arr2[index2]) {
+      merged.push(arr1[index1]);
+      index1++;
+    } else {
+      merged.push(arr2[index2]);
+      index2++;
+    }
+  }
+  while (index1 < arr1.length) {
+    merged.push(arr1[index1]);
+    index1++;
+  }
+  while (index2 < arr2.length) {
+    merged.push(arr2[index2]);
+    index2++;
+  }
+  return merged;
+}
+
+function mergeSort(arr) {
+  // base case
+  if (arr.length < 2) return arr;
+  let mid = Math.floor(arr.length / 2);
+  let firstHalf = arr.slice(0, mid);
+  let secondHalf = arr.slice(mid);
+  return merge(mergeSort(firstHalf), mergeSort(secondHalf));
+}
+
 
 
 
 QUICK SORT
+
 
 
 
